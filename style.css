@@ -647,13 +647,8 @@ address {
   max-width: 1440px;
 }
   
-  #headerCanvas {
+  header {
   margin-top: 4rem;
-}
-  
-  #headerLogo {
-  min-width: 176px;
-    margin-top: 8rem;
 }
   
   nav#headerNav li {
