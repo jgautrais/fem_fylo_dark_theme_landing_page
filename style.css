@@ -647,6 +647,10 @@ address {
   max-width: 1440px;
 }
   
+  #headerCanvas {
+  margin-top: 4rem;
+}
+  
   #headerLogo {
   min-width: 176px;
 }
