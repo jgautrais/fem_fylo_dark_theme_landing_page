@@ -87,3 +87,741 @@ select {
 
 /*SITE CSS*/
 
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: hsl(0, 0%, 95%);
+    background: url("images/bg-curvy-mobile.svg"), linear-gradient(to bottom, hsl(217, 28%, 15%) 0%, hsl(217, 28%, 15%) 26rem, hsl(218, 28%, 13%) 26rem, hsl(218, 28%, 13%) 100%);
+   background-repeat: no-repeat;
+   background-position: top 16.5rem center, top;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a:link, a:visited, li a:link, li a:visited, address {
+  text-decoration: none;
+  color: hsl(0, 0%, 97%);
+  font-style: normal;
+  transition: 0.2s ease-out;
+}
+
+.button {
+  position: relative;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  color: hsl(0, 0%, 97%);
+  font-weight: 700;
+  border: none;
+  text-align: center;
+  transition: scale 0.2s ease-in-out;
+  border-radius: 4rem;
+  box-shadow: 0 3px 20px 2px hsl(217, 28%, 5%);
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 4rem;
+}
+
+.button::before {
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+.button::after {
+  opacity: 0;
+  background: hsl(188, 71%, 76%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.button:active {
+  transform: scale(0.965);
+}
+
+.button:focus, input:focus {
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover::after, .button:active::after {
+  opacity: 1;
+}
+
+#accessButton {
+  z-index: 1;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, p {
+  line-height: 1.5;
+}
+
+header, main, #footerWidth {
+  max-width: calc(375px*0.95);
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#headerCanvas {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+#headerLogo {
+  min-width: 88px;
+  flex: 0;
+}
+
+nav#headerNav {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  flex: 1;
+}
+
+nav#headerNav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav#headerNav li:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+
+nav#headerNav li:first-of-type {
+  min-width: 55px;
+}
+
+nav#headerNav li:not(:first-of-type) {
+  min-width: 42px;
+}
+
+nav#headerNav li a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+nav#headerNav li a:active {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+main, section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  width: 90%;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+#introIllustration {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+#intro h1, #intro p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#intro h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#intro p {
+  width: 91%;
+  margin-bottom: 2rem;
+}
+
+#introButton {
+  width: 17rem;
+  padding: 1.2rem 0;
+}
+
+#details {
+  margin-top: 3rem;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.detailsContainer .img {
+  width: 91px;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailsContainer h3 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  font-size: 18px
+}
+
+.detailsContainer p {
+  margin-top: 0.7rem;
+}
+
+#productive {
+  margin-top: 8rem;
+}
+
+#productiveIcon {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.productiveText h2 {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 18px
+}
+
+.productiveText p {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.productiveText p:last-of-type a:after {
+  content:'';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: url("images/icon-arrow.svg");
+  top: 3px;
+  left: 137px;
+}
+
+.productiveText p:last-of-type a:hover:after {
+  filter: invert(0%) sepia(0%) saturate(0%) brightness(200%) contrast(100%);
+  transition: filter 0.25s ease-in-out;
+}
+
+.productiveText p a:link, .productiveText p a:visited {
+  color: hsl(176, 68%, 64%);
+  text-decoration: underline hsl(176, 68%, 64%);
+  text-underline-offset: 0.6em;
+  white-space:pre;
+}
+
+.productiveText p a:hover {
+  color: hsl(0, 0%, 97%);
+  text-decoration-color: hsl(0, 0%, 97%);
+}
+
+.productiveText p a:active {
+  color: hsl(198, 60%, 50%);
+  text-decoration-color: hsl(198, 60%, 50%);
+}
+
+#testimonials {
+  margin-top: 12rem;
+}
+
+.testimonialsContainer {
+  background: hsl(219, 30%, 18%);
+  margin: 1.5rem 0 0;
+  width: 90%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative
+}
+
+.testimonialsContainer:first-of-type:before {
+  content:'';
+  position: absolute;
+  width: 27.5px;
+  height: 22.5px;
+  background: url("images/bg-quotes.png");
+  background-size: cover;
+  top: -18px;
+  left: 10px;
+  z-index: -1;
+}
+
+.testimonialsContainer>p, .testimonialsContainer .testimonialsHuman {
+  width: 85%;
+}
+.testimonialsContainer>p {
+  margin-top: 10%;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.testimonialsContainer .testimonialsHuman {
+  display: flex;
+  margin: 8% 0;
+  align-items: flex-start;
+}
+
+.testimonialsContainer .testimonialsHuman .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 28px;
+  margin-right: 10px;
+  align-self: baseline;
+  overflow: hidden;
+}
+
+.testimonialsContainer .testimonialsHuman .humanDetails {
+  line-height: 1.0;
+}
+
+.testimonialsContainer .testimonialsHuman .humanDetails .humanName {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+  color: hsl(0, 0%, 95%);
+}
+
+.testimonialsContainer .testimonialsHuman .humanDetails .humanRole {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
+#access {
+  background: hsl(217, 28%, 15%);
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  top: 150px;
+  box-shadow: 0 5px 20px 2px hsl(217, 28%, 5%)
+}
+
+#access h4 {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 2rem 0 1rem;
+}
+
+#access p {
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+#access input {
+  width: 18rem;
+  padding: 1rem 0 1rem 1.5rem;
+  box-sizing: border-box;
+  border-radius: 4rem;
+  border: none;
+  box-shadow: 0 3px 20px 2px hsl(217, 28%, 5%);
+} 
+
+#access label {
+  display: block;
+  opacity: 0;
+  margin: 0.3rem 0 0.5rem;
+  color: hsl(0, 100%, 63%);
+  font-size: 10px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+
+#access input:focus:invalid + label {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#access input:valid + label {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#accessButton {
+  width: 18rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+footer {
+  width: 100%;
+  background: hsl(216, 53%, 9%);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#footerWidth {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#footerCanvas {
+  width: 90%;
+}
+
+#footerLogo {
+  margin: 15rem 0 2rem;
+  width: 176px;
+}
+
+address {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.addressContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.addressContainer p {
+  margin-right: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.addressContainer a:hover {
+  text-decoration: underline;
+}
+
+.addressContainer a:active {
+  color: hsl(176, 68%, 64%);
+}
+
+
+.addressIcon {
+  min-width: 20px;
+  height: 20px;
+  margin-right: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.addressContainer:nth-of-type(1) .addressIcon {
+  background-image: url("images/icon-location.svg");
+}
+
+.addressContainer:nth-of-type(2) .addressIcon {
+  background-image: url("images/icon-phone.svg");
+}
+
+.addressContainer:nth-of-type(3) .addressIcon {
+  background-image: url("images/icon-email.svg");
+}
+
+#footerNav {
+  display: flex;
+  flex-flow: column;
+  margin: 4rem 0;
+}
+
+#footerNav ul li {
+  margin-bottom: 1.5rem;
+  min-width: 80px;
+}
+
+#footerNav ul li:nth-of-type(4) {
+  margin-bottom: 3.5rem;
+}
+
+#footerNav ul li a:hover {
+  font-weight: 700;
+}
+
+#footerNav ul li a:active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+.socialCircle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid hsl(0, 0%, 92%);
+  border-radius: 2.2rem;
+  margin: 0 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialCircle .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialCircle:hover {
+  border: 2px solid hsl(176, 68%, 64%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.socialCircle img {
+  width: 1.1rem;
+  height: 1.1rem;
+  filter: invert(100%);
+}
+
+.socialCircle:hover img {
+  filter: invert(77%) sepia(34%) saturate(539%) hue-rotate(125deg) brightness(97%) contrast(93%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+   color: hsl(0, 0%, 80%);
+}
+
+@media (min-width: 1024px) {
+  html, body {
+    background: url("images/bg-curvy-desktop.svg"), linear-gradient(to bottom, hsl(217, 28%, 15%) 0%, hsl(217, 28%, 15%) 56rem, hsl(218, 28%, 13%) 56rem, hsl(218, 28%, 13%) 100%);
+   background-repeat: no-repeat;
+   background-position: top 26.4rem center, top;
+}
+  
+  header, main, #footerWidth {
+  max-width: 1440px;
+}
+  
+  #headerLogo {
+  min-width: 176px;
+}
+  
+  nav#headerNav li {
+  margin-right: 3.5rem;
+}
+  
+  nav#headerNav li:not(:last-of-type) {
+  margin-right: 3.5rem;
+}
+  
+  #intro {
+    width: 37%;
+  }
+  
+  #intro h1 {
+  font-size: 28px;
+}
+  
+    #intro p {
+  font-size: 16px;
+}
+  
+  #details {
+    flex-flow: row wrap;
+    width: 75%;
+    justify-content: center;
+  }
+  
+  .detailsContainer {
+    width: 36%;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+  
+  #productive {
+    flex-flow: row;
+    width: 85%;
+  }
+  
+  #productiveIcon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.productiveText {
+  flex: 1;
+  margin-left: 5%;
+}
+  
+  .productiveText h2 {
+  font-size: 28px;
+  margin-right: 40%;
+}
+  
+    .productiveText p {
+  margin-right: 19%;
+}
+  
+  #testimonials {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 80%;
+  }
+  
+  .testimonialsContainer {
+  margin: 1.5rem 1.5rem 0;
+  width: 90%;
+}
+  
+  .testimonialsContainer>p {
+  font-size: 14px;
+}
+  
+  .testimonialsContainer:first-of-type:before {
+  width: 55px;
+  height: 45px;
+  left: -7px;
+  top: -32px;
+}
+  
+  #access {
+    width: 60%;
+  }
+  
+  #access h4 {
+  font-size: 26px;
+  margin: 3rem 0 1rem;
+}
+  
+  #access p {
+  width: 75%;
+}
+  
+  form {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
+  #inputEmail{
+    flex: 1;
+    display: flex;
+    flex-flow: column
+  }
+  
+  #access input {
+    width: 90%;
+    margin-right: 10%;
+  }
+  
+  #access label {
+  margin: 0.6rem 0 0.5rem;
+
+}
+  
+  #accessButton {
+    flex: 0;
+    min-width: 14rem;
+    margin-bottom: 3rem;
+  }
+ 
+  #footerMain {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  } 
+  
+  address {
+    flex: 3;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    height: 120px;
+  }
+  
+  .addressContainer:first-of-type {
+    width: 55%;
+  }
+  
+  #footerNav {
+    flex: 1.5;
+  }
+  
+ #social {
+    flex: 0.5;
+  }
+  
+  #footerNav {
+  margin: 0 0 0 10%;
+}
+  
+  #footerNav ul {
+    display: flex;
+    flex-flow: column wrap;
+    height: 150px;
+    align-items: flex-end;
+  }
+
+#footerNav ul li {
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+#footerNav ul li:nth-of-type(4) {
+  margin-bottom: 0;
+}
+  
+  #social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+}
+  
+}
